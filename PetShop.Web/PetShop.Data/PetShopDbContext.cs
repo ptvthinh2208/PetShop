@@ -32,5 +32,21 @@ namespace PetShop.Data
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         #endregion
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<OrderDetail>(entity =>
+            {
+                entity.HasKey(d => d.OrderID);
+            });
+            modelBuilder.Entity<PostTag>(entity =>
+            {
+                entity.HasKey(d => d.PostID);
+            });
+            modelBuilder.Entity<ProductTag>(entity =>
+            {
+                entity.HasKey(d => d.ProductID);
+            });
+        }
     }
 }
