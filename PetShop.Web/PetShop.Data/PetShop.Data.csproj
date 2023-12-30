@@ -19,4 +19,8 @@
     <ProjectReference Include="..\PetShop.Model\PetShop.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

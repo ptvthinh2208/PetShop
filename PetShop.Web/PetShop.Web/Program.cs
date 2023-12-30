@@ -14,6 +14,7 @@ builder.Services.AddDbContext<PetShopDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("MyDB"));
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
